@@ -10,13 +10,13 @@ import Promociones from "views/Promociones/Promociones.jsx";
 import Servicios from "views/Servicios/Servicios.jsx";
 import Locales from "views/Locales/Locales.jsx";
 import Contacto from "views/Contacto/Contacto.jsx";
-
+import Detalles from "../views/Detalles/Detalles.jsx"
 var indexRoutes = [
   { path: "/landing-page", name: "LandingPage", component: LandingPage },
   { path: "/profile-page", name: "ProfilePage", component: ProfilePage },
   { path: "/login-page", name: "LoginPage", component: LoginPage },
   { path: "/components", name: "Components", component: Components },
-
+  { path: "/detalles", name: "Detalles", component: Detalles},
 
 
   { path: "/drunk-app", name: "Drunkapp", component: Drunkapp},

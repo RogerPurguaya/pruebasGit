@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router";
-
+import Detalles from "./views/Detalles/Detalles.jsx"
 import indexRoutes from "routes/index.jsx";
 
 import "assets/scss/material-kit-react.css";
