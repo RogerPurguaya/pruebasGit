@@ -11,14 +11,17 @@ import Servicios from "views/Servicios/Servicios.jsx";
 import Locales from "views/Locales/Locales.jsx";
 import Contacto from "views/Contacto/Contacto.jsx";
 import Detalles from "../views/Detalles/Detalles.jsx"
+import Stepper from "../views/Stepper/Stepper.jsx"
+import Principal from "../views/Detalles/Principal.jsx"
+
 var indexRoutes = [
   { path: "/landing-page", name: "LandingPage", component: LandingPage },
   { path: "/profile-page", name: "ProfilePage", component: ProfilePage },
   { path: "/login-page", name: "LoginPage", component: LoginPage },
   { path: "/components", name: "Components", component: Components },
   { path: "/detalles", name: "Detalles", component: Detalles},
-
-
+  { path: "/stepper", name: "Stepper", component: Stepper},
+  { path: "/principal", name: "Principal", component: Principal},
   { path: "/drunk-app", name: "Drunkapp", component: Drunkapp},
   { path: "/galeria", name: "Galeria", component: Galeria},
   { path: "/promociones", name: "Promociones", component: Promociones},
