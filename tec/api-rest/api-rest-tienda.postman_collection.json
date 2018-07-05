@@ -1,0 +1,1685 @@
+{
+	"info": {
+		"_postman_id": "04355884-9820-4cbf-9844-bd6dadc09521",
+		"name": "api-rest-tienda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "products",
+			"description": null,
+			"item": [
+				{
+					"name": "insert product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "asus X556U",
+									"description": "field required",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "700",
+									"description": "field required",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "100",
+									"description": "field required",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "5b2e8b2370e4b728d4d4c5a8",
+									"description": "field required ",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "laptop asus",
+									"description": "field optional",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"description": "field required",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product"
+							]
+						},
+						"description": "insertar producto "
+					},
+					"response": [
+						{
+							"id": "ddd80048-5a12-4dc3-9990-893800b475d3",
+							"name": "insert product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "asus X556U",
+											"description": "field required",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "700",
+											"description": "field required",
+											"type": "text"
+										},
+										{
+											"key": "stock",
+											"value": "100",
+											"description": "field required",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "5b2e8b2370e4b728d4d4c5a8",
+											"description": "field required ",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "laptop asus",
+											"description": "field optional",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "field required",
+											"type": "file",
+											"src": {
+												"0": {}
+											}
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "345",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Jun 2018 02:01:13 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"159-CYDJmIixfeD0hVQCrOI4c3tC0Y4\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"product\":{\"name\":\"asus X556U\",\"price\":700,\"stock\":100,\"category\":\"5b2e8b2370e4b728d4d4c5a8\",\"description\":\"laptop asus\",\"image\":\"http://localhost:3000//images//2018-06-24T02-01-13.701Zback2.JPG\",\"_id\":\"5b2efb6908d6f31eacee07dd\",\"createdAt\":\"2018-06-24T02:01:13.719Z\",\"updatedAt\":\"2018-06-24T02:01:13.719Z\",\"__v\":0},\"message\":\"created success\"}"
+						}
+					]
+				},
+				{
+					"name": "get all products ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "obtener todos los productos.\t\t"
+					},
+					"response": [
+						{
+							"id": "0ac64173-3400-464d-8588-6430451d78b0",
+							"name": "get all products ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:3000/api/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "473",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jun 2018 19:01:10 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d9-W+WGFViR5kOgt1kvQ6PY3neEtBI\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"products\":[{\"description\":\"laptop asus\",\"_id\":\"5b2e961f0a66e40fe0d780f5\",\"name\":\"asus X556U\",\"price\":700,\"stock\":100,\"category\":\"5b2e8b2370e4b728d4d4c5a8\",\"createdAt\":\"2018-06-23T18:49:03.296Z\",\"updatedAt\":\"2018-06-23T18:49:03.296Z\",\"__v\":0},{\"description\":\"laptop lenovo\",\"_id\":\"5b2e96a10a66e40fe0d780f6\",\"name\":\"Lenovo\",\"price\":650,\"stock\":80,\"category\":\"5b2e8b2370e4b728d4d4c5a8\",\"createdAt\":\"2018-06-23T18:51:13.459Z\",\"updatedAt\":\"2018-06-23T18:51:13.459Z\",\"__v\":0}]}"
+						}
+					]
+				},
+				{
+					"name": "get product by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/api/product/5b2e961f0a66e40fe0d780f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"5b2e961f0a66e40fe0d780f5"
+							]
+						},
+						"description": "obtener producto por id"
+					},
+					"response": [
+						{
+							"id": "2bd0b63d-74ea-4185-9ad1-720948d6e4df",
+							"name": "get product by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:3000/api/product/5b2e961f0a66e40fe0d780f5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"5b2e961f0a66e40fe0d780f5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jun 2018 19:04:53 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f2-QB+ArfRFaBgDV//4ooGXXskGwcM\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"product\":{\"description\":\"laptop asus\",\"_id\":\"5b2e961f0a66e40fe0d780f5\",\"name\":\"asus X556U\",\"price\":700,\"stock\":100,\"category\":\"5b2e8b2370e4b728d4d4c5a8\",\"createdAt\":\"2018-06-23T18:49:03.296Z\",\"updatedAt\":\"2018-06-23T18:49:03.296Z\",\"__v\":0}}"
+						}
+					]
+				},
+				{
+					"name": "update product ",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "asus X556U",
+									"description": "field required",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "700",
+									"description": "field required",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "100",
+									"description": "field required",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "5b2e8b2370e4b728d4d4c5a8",
+									"description": "field required ",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "laptop asus",
+									"description": "field optional",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"description": "field required",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product/5b2e961f0a66e40fe0d780f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"5b2e961f0a66e40fe0d780f5"
+							]
+						},
+						"description": "actualizar producto por id"
+					},
+					"response": [
+						{
+							"id": "7ee3b41b-192f-48e3-84c6-5726b374c573",
+							"name": "update product ",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									},
+									{
+										"key": "",
+										"value": "",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "asus X556U",
+											"description": "field required",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "700",
+											"description": "field required",
+											"type": "text"
+										},
+										{
+											"key": "stock",
+											"value": "100",
+											"description": "field required",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "5b2e8b2370e4b728d4d4c5a8",
+											"description": "field required ",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "laptop asus",
+											"description": "field optional",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "field required",
+											"type": "file",
+											"src": {
+												"0": {}
+											}
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product/5b2e961f0a66e40fe0d780f5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"5b2e961f0a66e40fe0d780f5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "313",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Jun 2018 02:05:23 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"139-03V7QX82NGnmpz5DdYjScTdd95M\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"updatedProduct\":{\"description\":\"new description\",\"image\":\"not found\",\"_id\":\"5b2e961f0a66e40fe0d780f5\",\"name\":\"product modify\",\"price\":690,\"stock\":50,\"category\":\"5b2e8b2370e4b728d4d4c5a8\",\"createdAt\":\"2018-06-23T18:49:03.296Z\",\"updatedAt\":\"2018-06-23T23:47:48.773Z\",\"__v\":0},\"message\":\"product updated success!\"}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"description": "",
+			"item": [
+				{
+					"name": "get category by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/api/category/5b2e8b2370e4b728d4d4c5a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"5b2e8b2370e4b728d4d4c5a8"
+							]
+						},
+						"description": "obtener una categoria por id"
+					},
+					"response": [
+						{
+							"id": "584318a9-de7d-4058-b3ca-3b9380c89a46",
+							"name": "obtener categoria por id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:3000/api/category/5b2e8b2370e4b728d4d4c5a8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"category",
+										"5b2e8b2370e4b728d4d4c5a8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "198",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jun 2018 18:24:10 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c6-cebRKTErW9bp0rbDjuWWTjperCw\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"category\":{\"description\":\"description modified\",\"_id\":\"5b2e8b2370e4b728d4d4c5a8\",\"name\":\"computers modified\",\"createdAt\":\"2018-06-23T18:02:11.267Z\",\"updatedAt\":\"2018-06-23T18:16:13.036Z\",\"__v\":0}}"
+						}
+					]
+				},
+				{
+					"name": "get all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories"
+							]
+						},
+						"description": "Obtener todas la categorias"
+					},
+					"response": [
+						{
+							"id": "950fb405-da98-4033-9cf0-7b9ea0a4353f",
+							"name": "obtener todas las categorias",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:3000/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "193",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jun 2018 18:09:29 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c1-8/novrXOu+WRvnfDq0vJT87ySN4\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"categories\":[{\"description\":\"computers in general\",\"_id\":\"5b2e8b2370e4b728d4d4c5a8\",\"name\":\"computers\",\"createdAt\":\"2018-06-23T18:02:11.267Z\",\"updatedAt\":\"2018-06-23T18:02:11.267Z\",\"__v\":0}]}"
+						}
+					]
+				},
+				{
+					"name": "insert category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "computers",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "computers in general",
+									"description": "optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category"
+							]
+						},
+						"description": "Petición http con el método post para agregar una categoría"
+					},
+					"response": [
+						{
+							"id": "c795f80a-00d2-4474-b96a-5b6a40b3072a",
+							"name": "Crear categoría (POST)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "computers",
+											"description": "required",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "computers in general",
+											"description": "optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"category"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jun 2018 18:04:18 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e3-RoYMCRUTYKJsg2pLMHPQxhMHBH0\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"category\":{\"name\":\"computers\",\"description\":\"computers in general\",\"_id\":\"5b2e8ba270e4b728d4d4c5a9\",\"createdAt\":\"2018-06-23T18:04:18.725Z\",\"updatedAt\":\"2018-06-23T18:04:18.725Z\",\"__v\":0},\"message\":\"created category success!\"}"
+						}
+					]
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "computers modified",
+									"description": "field required",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description modified",
+									"description": "field optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/category/5b2e8b2370e4b728d4d4c5a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"5b2e8b2370e4b728d4d4c5a8"
+							]
+						},
+						"description": "Petición para actualizar una categoria (enviar id de categoria como parámetro de url)"
+					},
+					"response": [
+						{
+							"id": "688bddd3-c9e4-4235-8ffa-f9f236998b26",
+							"name": "actualizar categoria",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "computers modified",
+											"description": "field required",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "description modified",
+											"description": "field optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/category/5b2e8b2370e4b728d4d4c5a8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"category",
+										"5b2e8b2370e4b728d4d4c5a8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "234",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 23 Jun 2018 18:16:13 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ea-I5A6xIZKS2AbnrxXB0cYVlIgDtE\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"updatedCategory\":{\"description\":\"computers in general\",\"_id\":\"5b2e8b2370e4b728d4d4c5a8\",\"name\":\"computers\",\"createdAt\":\"2018-06-23T18:02:11.267Z\",\"updatedAt\":\"2018-06-23T18:02:11.267Z\",\"__v\":0},\"message\":\"categpry updated success!\"}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"description": null,
+			"item": [
+				{
+					"name": "insert order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"user\":\"5b2f25c136981a165c59df72\",\n\"products\":[\"5b2e961f0a66e40fe0d780f5\",\"5b2e96a10a66e40fe0d780f6\"],\n\"payment\":\"transfer\",\n\"totalPrice\":\"123.5\"}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order"
+							]
+						},
+						"description": "Insertar una orden (POST)"
+					},
+					"response": [
+						{
+							"id": "9f553970-b0e9-4b7d-b5c7-70545f50a9ad",
+							"name": "insert order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"name": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"user\":\"5b2f25c136981a165c59df72\",\n\"products\":[\"5b2e961f0a66e40fe0d780f5\",\"5b2e96a10a66e40fe0d780f6\"],\n\"payment\":\"transfer\",\n\"totalPrice\":\"123.5\"}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/order",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"order"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "299",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Jun 2018 05:24:39 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12b-WgMLbXgyfXyKmAtGEGIP2Kd66JE\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"order\":{\"user\":\"5b2f25c136981a165c59df72\",\"products\":[\"5b2e961f0a66e40fe0d780f5\",\"5b2e96a10a66e40fe0d780f6\"],\"payment\":\"transfer\",\"totalPrice\":123.5,\"_id\":\"5b2f2b1684103f34582ba17b\",\"createdAt\":\"2018-06-24T05:24:38.994Z\",\"updatedAt\":\"2018-06-24T05:24:38.994Z\",\"__v\":0},\"message\":\"created success\"}"
+						}
+					]
+				},
+				{
+					"name": "get order by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/api/order/5b2f2b1684103f34582ba17b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"5b2f2b1684103f34582ba17b"
+							]
+						},
+						"description": "obtener una orden por id\t"
+					},
+					"response": [
+						{
+							"id": "315f007c-095c-40fe-851e-93075dde193f",
+							"name": "get order by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:3000/api/order/5b2f2b1684103f34582ba17b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"order",
+										"5b2f2b1684103f34582ba17b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1035",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Jun 2018 05:40:38 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"40b-t6q06q2N9nVevB5f7YN0V+QyvwE\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"order\":{\"products\":[{\"description\":\"laptop asus\",\"image\":\"http://localhost:3000//images//2018-06-24T02-05-23.912Zback.JPG\",\"_id\":\"5b2e961f0a66e40fe0d780f5\",\"name\":\"asus X556U\",\"price\":700,\"stock\":100,\"category\":\"5b2e8b2370e4b728d4d4c5a8\",\"createdAt\":\"2018-06-23T18:49:03.296Z\",\"updatedAt\":\"2018-06-24T02:05:23.918Z\",\"__v\":0},{\"description\":\"laptop lenovo\",\"image\":\"not found\",\"_id\":\"5b2e96a10a66e40fe0d780f6\",\"name\":\"Lenovo\",\"price\":650,\"stock\":80,\"category\":\"5b2e8b2370e4b728d4d4c5a8\",\"createdAt\":\"2018-06-23T18:51:13.459Z\",\"updatedAt\":\"2018-06-23T18:51:13.459Z\",\"__v\":0}],\"payment\":\"transfer\",\"totalPrice\":123.5,\"_id\":\"5b2f2b1684103f34582ba17b\",\"user\":{\"name\":\"username\",\"lastLogin\":\"2018-06-24T05:01:23.100Z\",\"_id\":\"5b2f25c136981a165c59df72\",\"email\":\"ejemplo@gmail.com\",\"avatar\":\"https://gravatar.com/avatar/eb1367cd83e26c5960fe641c9f509ee0?s=2006d=retro\",\"createdAt\":\"2018-06-24T05:01:53.856Z\",\"updatedAt\":\"2018-06-24T05:01:53.856Z\",\"__v\":0},\"createdAt\":\"2018-06-24T05:24:38.994Z\",\"updatedAt\":\"2018-06-24T05:24:38.994Z\",\"__v\":0}}"
+						}
+					]
+				},
+				{
+					"name": "get all orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:3000/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders"
+							]
+						},
+						"description": "obtener todas la ordenes disponibles"
+					},
+					"response": [
+						{
+							"id": "3935e9e3-c988-4384-90d2-5764a35dd746",
+							"name": "get all orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http://localhost:3000/api/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1038",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Jun 2018 05:44:47 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"40e-Ng3ptziknsMlIV8xxPUcr29cCEw\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"orders\":[{\"products\":[{\"description\":\"laptop asus\",\"image\":\"http://localhost:3000//images//2018-06-24T02-05-23.912Zback.JPG\",\"_id\":\"5b2e961f0a66e40fe0d780f5\",\"name\":\"asus X556U\",\"price\":700,\"stock\":100,\"category\":\"5b2e8b2370e4b728d4d4c5a8\",\"createdAt\":\"2018-06-23T18:49:03.296Z\",\"updatedAt\":\"2018-06-24T02:05:23.918Z\",\"__v\":0},{\"description\":\"laptop lenovo\",\"image\":\"not found\",\"_id\":\"5b2e96a10a66e40fe0d780f6\",\"name\":\"Lenovo\",\"price\":650,\"stock\":80,\"category\":\"5b2e8b2370e4b728d4d4c5a8\",\"createdAt\":\"2018-06-23T18:51:13.459Z\",\"updatedAt\":\"2018-06-23T18:51:13.459Z\",\"__v\":0}],\"payment\":\"transfer\",\"totalPrice\":123.5,\"_id\":\"5b2f2b1684103f34582ba17b\",\"user\":{\"name\":\"username\",\"lastLogin\":\"2018-06-24T05:01:23.100Z\",\"_id\":\"5b2f25c136981a165c59df72\",\"email\":\"ejemplo@gmail.com\",\"avatar\":\"https://gravatar.com/avatar/eb1367cd83e26c5960fe641c9f509ee0?s=2006d=retro\",\"createdAt\":\"2018-06-24T05:01:53.856Z\",\"updatedAt\":\"2018-06-24T05:01:53.856Z\",\"__v\":0},\"createdAt\":\"2018-06-24T05:24:38.994Z\",\"updatedAt\":\"2018-06-24T05:24:38.994Z\",\"__v\":0}]}"
+						}
+					]
+				},
+				{
+					"name": "upload order",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"products\": [\"5b2e961f0a66e40fe0d780f5\"],\n\t\"totalPrice\": \"650\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/order/5b2f2b1684103f34582ba17b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"order",
+								"5b2f2b1684103f34582ba17b"
+							]
+						},
+						"description": "actualizar orden"
+					},
+					"response": [
+						{
+							"id": "701ecc1c-58ce-418f-9b7d-96e2ed83409d",
+							"name": "upload order",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"name": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"products\": [\"5b2e961f0a66e40fe0d780f5\"],\n\t\"totalPrice\": \"650\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/order/5b2f2b1684103f34582ba17b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"order",
+										"5b2f2b1684103f34582ba17b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "311",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Jun 2018 05:49:22 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"137-SiRzvQdYKC2pFUEeOstDy3BHv6E\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"oldOrder\":{\"products\":[\"5b2e961f0a66e40fe0d780f5\",\"5b2e96a10a66e40fe0d780f6\"],\"payment\":\"transfer\",\"totalPrice\":123.5,\"_id\":\"5b2f2b1684103f34582ba17b\",\"user\":\"5b2f25c136981a165c59df72\",\"createdAt\":\"2018-06-24T05:24:38.994Z\",\"updatedAt\":\"2018-06-24T05:24:38.994Z\",\"__v\":0},\"message\":\"product updated success!\"}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"description": "Ejemplos para realizar peticiones de registro y logeo",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ejemplo@gmail.com",
+									"description": "field required",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"description": "field required",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "username",
+									"description": "field optional",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"signUp"
+							]
+						},
+						"description": "Registro de usuarios"
+					},
+					"response": [
+						{
+							"id": "4f96e1a4-5620-472c-8a88-477ca7b28ac5",
+							"name": "SignUp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "ejemplo@gmail.com",
+											"description": "field required",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"description": "field required",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "username",
+											"description": "field optional",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/signUp",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"signUp"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "218",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Jun 2018 03:39:38 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"da-QFyezqks6sY+/rfu4/EctDNKKb4\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YjJmMTI3YTk1ZjBhNDE2OTBmNjY1YjEiLCJpYXQiOjE1Mjk4MTE1NzgsImV4cCI6MTUzMTAyMTE3OH0.iMfx7edv14fK-o6-W0_rM0lgWQjunLZfJ2j-j_30uo8\",\"message\":\"user created success!\"}"
+						}
+					]
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ejemplo@gmail.com",
+									"description": "field required ",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"description": "field required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/signIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"signIn"
+							]
+						},
+						"description": "login de usuarios\t\t"
+					},
+					"response": [
+						{
+							"id": "c67fc8b3-810a-49ab-9bd1-d7123f2cc425",
+							"name": "signIn",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "ejemplo@gmail.com",
+											"description": "field required ",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"description": "field required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/signIn",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"signIn"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "211",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Jun 2018 03:51:42 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d3-uLakHMtFgtOlmPP5xXOxZgTv2uo\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"body": "{\"mensaje\":\"Login success!\",\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1YjJmMTI3YTk1ZjBhNDE2OTBmNjY1YjEiLCJpYXQiOjE1Mjk4MTIzMDIsImV4cCI6MTUzMTAyMTkwMn0.inTUEC3YN0VaG1eLVCZC40y38wRg5K1UaQXHVavSn6M\"}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

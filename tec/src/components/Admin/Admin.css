@@ -1,0 +1,108 @@
+.form_style_3{
+    margin-left: 0%;
+    width: 400px;
+    margin: auto;
+}
+
+
+.form_style_3 label{
+    display:block;
+    margin-bottom: 10px;
+}
+.usuarioss{
+    border: #0000cc;
+
+}
+.categoriass{
+    border: #0000cc;
+      
+}
+.productoss{
+    border: #0000cc;
+}
+
+.form_style_3 fieldset{
+    margin-left: 0px;
+    
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid rgb(58, 156, 41);
+    padding: 20px;
+    background: rgb(246, 252, 245);
+   
+}
+.form_style_3 fieldset legend{
+    color: #000000;
+    border-top: 1px solid rgb(112, 238, 74);
+    border-left: 1px solid rgb(110, 241, 84);
+    border-right: 1px solid rgb(112, 224, 78);
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    background: rgb(246, 252, 245);
+    padding: 0px 8px 3px 8px;
+    
+    font-size: 12px;
+}
+
+.form_style_3 input[type=text],
+.form_style_3 input[type=date],
+.form_style_3 input[type=datetime],
+.form_style_3 input[type=number],
+.form_style_3 input[type=search],
+.form_style_3 input[type=time],
+.form_style_3 input[type=url],
+.form_style_3 input[type=email],
+.form_style_3 select, 
+.form_style_3 textarea{
+    position: relative;
+    width: 300px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid rgb(47, 212, 110);
+    outline: none;
+    color: rgb(114, 240, 141);
+    padding: 5px 8px 5px 8px;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+    background: rgb(246, 252, 245);
+    
+}
+.form_style_3  input[type=submit],
+.form_style_3  input[type=button]{
+    
+    background: rgb(241, 167, 29);
+    border: 1px solid rgb(241, 159, 64);
+    padding: 5px 15px 5px 15px;
+    color: rgb(10, 4, 7);
+    box-shadow: inset -1px -1px 3px rgb(255, 231, 98);
+    -moz-box-shadow: inset -1px -1px 3px rgb(255, 231, 98);
+    -webkit-box-shadow: inset -1px -1px 3px rgb(255, 231, 98);
+    border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;    
+    font-weight: bold;
+}
+
+
+
+table,td, th { border: 1px solid black; }
+table { border-collapse: collapse; margin: auto; }
+td, th { width: 100px; height: 35px; }
+caption { font-family: Garamond; font-size: 1.5em; font-weight: bold; 
+          color: #990000;text-align: center; }
+th { font-family: Verdana; font-weight: bold; color:#660033; 
+     background-color: #ffffcc; }
+td { font-family: Arial; color:#0000cc;background-color: #ccffff; 
+     padding-left: 10px;width: 90px;  padding-left: 10px; width: 90px; }
+
+
+
+
+
+
