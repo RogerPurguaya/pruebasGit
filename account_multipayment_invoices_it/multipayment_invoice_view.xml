@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+        <record id="multipayment_invoice_form_view" model="ir.ui.view">
+            <field name="name">multipayment.invoice.form</field>
+            <field name="model">multipayment.invoice</field>
+            <field name="arch" type="xml">
+                <form string="Pagos Múltiples">
+                    <header>
+                        <button string="Procesar" type="object" name="process" states="draft" class="oe_highlight"/>
+                        <button string="Calcular" type="object" name="calculate" states="draft" class="oe_highlight"/>
+                        <button string="Refrescar" name="refresh_lines" type="object" class="btn-primary"/>
+                        <!-- <button string="Cancelar" type="object" name="cancelar" states="done" class="oe_highlight"/> -->
+                        <field name="state" widget="statusbar" readonly="1"/>
+                    </header>
+                    <!-- <group>
+                        <field name="name" readonly="1"/>
+                    </group> -->
+                    <group>
+                        <group> 
+                        <field name="type_invoices" required="1"/>
+                            <field name="partner_id" required="1" attrs="{'readonly':[('state','=','done')]}"/>
+                            <field name="journal_id" required="1" attrs="{'readonly':[('state','=','done')]}" domain="['|',('type','=','cash'),('type','=','bank')]"/>
+                            <field name="unbalance_ammount" attrs="{'readonly':[('state','=','done')]}"/>
+                            <field name="ammount_total" attrs="{'readonly':[('state','=','done')]}"/>
+                        </group>
+                        <group> 
+                            <field name="payment_date" required="1" attrs="{'readonly':[('state','=','done')]}"/>
+                            <field name="nro_operation" required="1" attrs="{'readonly':[('state','=','done')]}"/>
+                            <field name="glosa" required="1" attrs="{'readonly':[('state','=','done')]}"/>
+                            <field name="custom_exchange" attrs="{'readonly':[('state','=','done')]}"/>
+                            <field name="exchange_type" attrs="{'readonly':['|',('state','=','done'),('custom_exchange','=',False)]}" required="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Facturas">
+                            <field name="invoice_ids"  attrs="{'readonly':[('state','=','done')]}">
+                                <tree editable="bottom">
+                                    <field name="invoice_id" required="1" domain="[('partner_id','=',parent.partner_id),('state','=','open'),('type','in',('out_invoice','out_refund'))]"/>
+                                    <field name="doc_type" readonly="1"/>
+                                    <field name="invoice_number" readonly="1" string="Nro Factura"/>
+                                    <field name="currency_id" required="1" readonly="1"/>
+                                    <field name="account_id" invisible="1"/>
+                                    <field name="account_code" readonly="1" string="Cuenta"/>
+                                    <field name="rest" readonly="1"/>
+                                    <field name="rest_ext" readonly="1"/>
+                                    <field name="amount_cc" required="1"/>
+                                    <field name="amount_ci" readonly="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- multipayment.invoice tree view -->
+        <record id="multipayment_invoice_view_tree" model="ir.ui.view">
+            <field name="name">multipayment.invoice.view.tree</field>
+            <field name="model">multipayment.invoice</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="partner_id"/>
+                    <field name="journal_id"/>
+                    <field name="payment_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- multipayment.invoice action window -->
+        <record id="multipayment_invoice_action" model="ir.actions.act_window">
+            <field name="name">multipayment.invoice.action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">multipayment.invoice</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <menuitem id="multipayment_invoice_menu" name="Pagos Múltiples"
+                  parent="account_bank_statement_it.menu_banco_caja"
+                  action="multipayment_invoice_action" sequence="15"/>
+	</data>
+</odoo>
